@@ -1,0 +1,6 @@
+{
+  // Sitio estático: Cloudflare sirve los archivos de esta carpeta tal cual.
+  "name": "100volcanes",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "." }
+}
