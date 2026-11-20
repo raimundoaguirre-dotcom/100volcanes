@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>100 Volcanes — Serie documental sobre los volcanes de Chile</title>
+<meta name="description" content="Serie documental y desafío deportivo: subir y registrar 100 volcanes de Chile. Mira el piloto, conoce la ruta y súmate como auspiciador o parte de la comunidad.">
+<link rel="canonical" href="https://100volcanes.org/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="100 Volcanes">
+<meta property="og:description" content="Serie documental y desafío deportivo: subir y registrar 100 volcanes de Chile. Mira el piloto, conoce la ruta y súmate como auspiciador o parte de la comunidad.">
+<meta property="og:url" content="https://100volcanes.org/">
+<meta property="og:image" content="https://100volcanes.org/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preload" as="image" href="img/hero-llaima.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0B0B0B}
+a{color:#F2F2F0}a:hover{color:#8CC56F}
+html{scroll-behavior:smooth}
+.hero-bg{background-image:url(img/hero-llaima.jpg);background-size:cover;background-position:center 35%}
+.sarnoso-bg{background-image:url(img/sarnoso.jpg);background-size:cover;background-position:center}
+.hatch{background-image:repeating-linear-gradient(135deg,rgba(242,242,240,0.55) 0 1px,transparent 1px 7px)}
+.hatch-soft{background-image:repeating-linear-gradient(135deg,rgba(242,242,240,0.16) 0 1px,transparent 1px 9px)}
+.label{display:flex;align-items:center;gap:12px;font-weight:700;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#BDBDB9}
+.strip{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:#4A4A47 transparent}
+.strip>*{scroll-snap-align:start}
+@keyframes kenburns{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.14) translate3d(-1.5%,-2%,0)}}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes introOpen{0%{transform:scale(1);opacity:1}55%{opacity:1}100%{transform:scale(1.35);opacity:0}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes cue{0%{transform:translateY(0);opacity:0}30%{opacity:1}100%{transform:translateY(14px);opacity:0}}
+.kb{animation:kenburns 22s ease-in-out infinite alternate}
+.intro{animation:introOpen 2.8s cubic-bezier(.7,0,.3,1) .5s forwards}
+.rise{opacity:0;animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:2.3s}.d2{animation-delay:2.5s}.d3{animation-delay:2.75s}.d4{animation-delay:2.95s}.d5{animation-delay:3.15s}
+.cue{animation:cue 1.8s ease-in-out infinite}
+.zoomcard .zc{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.zoomcard:hover .zc{transform:scale(1.06)}
+.lift{transition:transform .35s ease,border-color .35s ease}
+.lift:hover{transform:translateY(-6px);border-color:rgba(242,242,240,0.35)}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+.routeline{transform-origin:top;animation:grow linear both;animation-timeline:view();animation-range:entry 10% cover 70%}
+}
+@media (prefers-reduced-motion: reduce){
+.kb,.cue,.reveal,.routeline{animation:none!important}
+.rise{animation:none!important;opacity:1}
+.intro{display:none!important}
+html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div style="background: #0B0B0B; color: #F2F2F0; font-family: Montserrat, system-ui, sans-serif; width: 100%; overflow: hidden">
+
+  <section id="top" style="position: relative; min-height: 880px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; background: #0B0B0B">
+    <div aria-hidden="true" class="hero-bg kb" style="position: absolute; inset: 0"></div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,11,0.6) 0%, rgba(11,11,11,0) 24%, rgba(11,11,11,0) 42%, rgba(11,11,11,0.92) 100%)"></div>
+
+    <header class="rise d1" style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 4%">
+      <a href="#top" aria-label="100 Volcanes, inicio" style="display: block">
+        <img src="img/logo-100volcanes.png" alt="100 Volcanes" style="height: 58px; width: auto; display: block">
+      </a>
+      <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase">
+        <a href="#desafio" style="text-decoration: none; padding: 14px 0">Desafío</a>
+        <a href="#serie" style="text-decoration: none; padding: 14px 0">Serie</a>
+        <a href="#ruta" style="text-decoration: none; padding: 14px 0">Ruta</a>
+        <a href="#cordada" style="text-decoration: none; padding: 14px 0">Equipo</a>
+        <a href="#sumate" style="text-decoration: none; padding: 14px 20px; background: #F2F2F0; color: #0B0B0B">Auspicia</a>
+      </nav>
+    </header>
+
+    <div style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px; padding: 0 4% 72px">
+      <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+        <span class="rise d2 label" style="color: #F2F2F0"><span aria-hidden="true" class="hatch" style="width: 44px; height: 14px"></span>Una serie documental · Chile</span>
+        <h1 class="rise d3" style="margin: 0; font-weight: 900; font-size: clamp(48px, 7vw, 104px); line-height: 0.93; letter-spacing: -0.015em; text-transform: uppercase">Nadie cuida<br>lo que no conoce.</h1>
+        <p class="rise d4" style="margin: 0; max-width: 540px; font-size: 18px; font-weight: 500; line-height: 1.6; color: #E4E4E1">Un desafío deportivo con misión de conservación: subir y registrar 100 volcanes de Chile, y compartirlo gratis con todo el país.</p>
+        <div class="rise d5" style="display: flex; flex-wrap: wrap; gap: 12px; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase">
+          <a href="https://www.youtube.com/@100volcanes9" style="display: inline-flex; align-items: center; gap: 12px; min-height: 54px; padding: 0 26px; background: #F2F2F0; color: #0B0B0B; text-decoration: none">
+            <svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1 L11 7 L1 13 Z" fill="#0B0B0B"></path></svg>Ver el piloto</a>
+          <a href="#sumate" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border: 1.5px solid #F2F2F0; text-decoration: none">Auspicia una cumbre</a>
+        </div>
+      </div>
+      <div class="rise d5" style="flex: 1 1 260px; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; text-align: right">
+        <span style="font-weight: 900; font-size: 96px; line-height: 0.88; font-variant-numeric: tabular-nums"><span id="count" data-to="21" style="color: #8CC56F">0</span><span style="color: rgba(242,242,240,0.45)">/100</span></span>
+        <span class="label" style="color: #E4E4E1">Volcanes registrados</span>
+        <span style="font-size: 13px; font-weight: 500; color: #BDBDB9">Foto: Volcán Llaima, Araucanía</span>
+      </div>
+    </div>
+
+    <a href="#cifras" aria-label="Bajar al contenido" style="position: absolute; z-index: 2; left: 50%; bottom: 18px; margin-left: -12px; width: 24px; height: 38px; border: 1.5px solid rgba(242,242,240,0.6); border-radius: 12px; display: flex; justify-content: center; padding-top: 7px; box-sizing: border-box">
+      <span aria-hidden="true" class="cue" style="width: 3px; height: 8px; border-radius: 2px; background: #F2F2F0"></span>
+    </a>
+
+    <div aria-hidden="true" class="intro" style="position: absolute; inset: 0; z-index: 5; background: #000000; mix-blend-mode: multiply; pointer-events: none; display: flex; align-items: center; justify-content: center">
+      <span style="color: #FFFFFF; font-weight: 900; font-size: min(44vw, 620px); line-height: 1; letter-spacing: -0.05em">100</span>
+    </div>
+  </section>
+
+  <section id="cifras" style="border-bottom: 1px solid rgba(242,242,240,0.12)">
+    <div style="max-width: 1240px; width: 88%; margin: 0 auto; padding: 56px 0 40px; display: flex; flex-direction: column; gap: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 900; font-size: 54px; line-height: 1">+50 mil</span><span style="font-size: 14px; font-weight: 500; color: #A3A3A0">seguidores en redes</span></div>
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 900; font-size: 54px; line-height: 1">+2 M</span><span style="font-size: 14px; font-weight: 500; color: #A3A3A0">visualizaciones en reels</span></div>
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 900; font-size: 54px; line-height: 1">413 mil</span><span style="font-size: 14px; font-weight: 500; color: #A3A3A0">cuentas alcanzadas al mes</span></div>
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 900; font-size: 54px; line-height: 1">10</span><span style="font-size: 14px; font-weight: 500; color: #A3A3A0">regiones recorridas</span></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; padding-top: 28px; border-top: 1px solid rgba(242,242,240,0.12)">
+        <span class="label">Patrocina / Colaboran</span>
+        <span style="font-weight: 700; font-size: 16px">Sernatur</span>
+        <span style="font-weight: 700; font-size: 16px">La Sportiva</span>
+        <span style="font-weight: 700; font-size: 16px">Patagonia</span>
+        <span style="font-size: 13px; color: #A3A3A0">[CIFRAS DEL DECK 2025 Y ALIANZAS: CONFIRMAR ANTES DE PUBLICAR]</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="desafio" style="padding: 120px 0 100px">
+    <div style="max-width: 1240px; width: 88%; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <span class="label"><span aria-hidden="true" class="hatch" style="width: 44px; height: 14px"></span>El desafío</span>
+        <h2 class="reveal" style="margin: 0; max-width: 960px; font-weight: 900; font-size: clamp(36px, 5vw, 72px); line-height: 0.98; text-transform: uppercase">Chile tiene más de 2.000 volcanes. <span style="color: #8CC56F">Elegimos cien.</span></h2>
+        <p class="reveal" style="margin: 0; max-width: 620px; font-size: 18px; line-height: 1.6; color: #BDBDB9">La idea era subirlos todos. Hicimos la cuenta: casi veinte años, a un volcán cada tres días. Así nació 100 Volcanes.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 2px solid #F2F2F0">
+        <div class="reveal" style="padding: 32px 28px 8px 0; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-weight: 900; font-size: 44px; color: #8CC56F">01</span>
+          <h3 style="margin: 0; font-weight: 800; font-size: 24px; text-transform: uppercase">Vida sana en torno al deporte</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A3A3A0">La montaña como escuela de esfuerzo, preparación y respeto por los propios límites.</p>
+        </div>
+        <div class="reveal" style="padding: 32px 28px 8px 0; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-weight: 900; font-size: 44px; color: #8CC56F">02</span>
+          <h3 style="margin: 0; font-weight: 800; font-size: 24px; text-transform: uppercase">Recursos naturales y geología</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A3A3A0">Cada cumbre cuenta cómo se formó Chile: roca, hielo, agua y las comunidades a sus pies.</p>
+        </div>
+        <div class="reveal" style="padding: 32px 0 8px 0; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-weight: 900; font-size: 44px; color: #8CC56F">03</span>
+          <h3 style="margin: 0; font-weight: 800; font-size: 24px; text-transform: uppercase">Turismo y economía local</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A3A3A0">Ponemos en valor rutas, guías, refugios y pueblos de montaña para que el turismo deje algo en el lugar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="serie" style="padding: 40px 0 100px">
+    <a href="https://www.youtube.com/@100volcanes9" class="zoomcard" aria-label="Ver el piloto 01: Sarnoso" style="position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 760px; padding: 0 6% 64px; box-sizing: border-box; text-decoration: none; overflow: hidden">
+      <div aria-hidden="true" class="sarnoso-bg zc" style="position: absolute; inset: 0"></div>
+      <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,11,0.75) 0%, rgba(11,11,11,0) 30%, rgba(11,11,11,0) 50%, rgba(11,11,11,0.9) 100%)"></div>
+      <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px">
+        <div style="display: flex; flex-direction: column; gap: 14px; color: #FFFFFF">
+          <span class="label" style="color: #FFFFFF"><span aria-hidden="true" class="hatch" style="width: 44px; height: 14px"></span>La serie · Episodio piloto</span>
+          <span class="reveal" style="font-weight: 900; font-size: clamp(56px, 9vw, 136px); line-height: 0.88; text-transform: uppercase">01: Sarnoso</span>
+          <span style="max-width: 520px; font-size: 18px; font-weight: 500; line-height: 1.55; color: #E4E4E1">Desafío Rupanco: del agua del lago a la cumbre. «No venimos a vencer al lago, a la montaña o al viento.»</span>
+        </div>
+        <span style="width: 108px; height: 108px; border-radius: 50%; background: #F2F2F0; display: flex; align-items: center; justify-content: center; flex: none">
+          <svg width="30" height="34" viewBox="0 0 12 14" aria-hidden="true"><path d="M2 1 L11 7 L2 13 Z" fill="#0B0B0B"></path></svg>
+        </span>
+      </div>
+    </a>
+
+    <div style="max-width: 1240px; width: 88%; margin: 0 auto; padding-top: 72px; display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-end">
+        <h2 class="reveal" style="margin: 0; font-weight: 900; font-size: clamp(32px, 4vw, 56px); line-height: 1; text-transform: uppercase">Temporada 1</h2>
+        <p style="margin: 0; max-width: 460px; font-size: 16px; line-height: 1.6; color: #A3A3A0">Para todo espectador. 10 capítulos de unos 35 minutos, con imágenes 100% propias: un volcán, su gente y su historia.</p>
+      </div>
+      <div class="strip" tabindex="0" role="list" aria-label="Capítulos de la temporada 1">
+        
+          <div role="listitem" class="lift" style="flex: 0 0 280px; aspect-ratio: 2 / 3; border: 1px solid rgba(242,242,240,0.16); background: #131313; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; box-sizing: border-box; position: relative; overflow: hidden">
+            <div aria-hidden="true" class="sarnoso-bg" style="position: absolute; inset: 0; opacity: 0.55"></div>
+            <span style="position: relative; font-weight: 900; font-size: 64px; line-height: 0.9; color: #FFFFFF">01</span>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-weight: 800; font-size: 22px; text-transform: uppercase">Sarnoso</span>
+              <span style="font-weight: 600; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #BDBDB9">Piloto · Disponible</span>
+            </div>
+          </div>
+        
+          <div role="listitem" class="lift" style="flex: 0 0 280px; aspect-ratio: 2 / 3; border: 1px solid rgba(242,242,240,0.16); background: #131313; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; box-sizing: border-box; position: relative; overflow: hidden">
+            <div aria-hidden="true" class="hatch-soft" style="position: absolute; inset: 0; opacity: 1"></div>
+            <span style="position: relative; font-weight: 900; font-size: 64px; line-height: 0.9; color: #4A4A47">02</span>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-weight: 800; font-size: 22px; text-transform: uppercase">[VOLCÁN]</span>
+              <span style="font-weight: 600; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #BDBDB9">En producción</span>
+            </div>
+          </div>
+        
+          <div role="listitem" class="lift" style="flex: 0 0 280px; aspect-ratio: 2 / 3; border: 1px solid rgba(242,242,240,0.16); background: #131313; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; box-sizing: border-box; position: relative; overflow: hidden">
+            <div aria-hidden="true" class="hatch-soft" style="position: absolute; inset: 0; opacity: 1"></div>
+            <span style="position: relative; font-weight: 900; font-size: 64px; line-height: 0.9; color: #4A4A47">03</span>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-weight: 800; font-size: 22px; text-transform: uppercase">[VOLCÁN]</span>
+              <span style="font-weight: 600; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #BDBDB9">En producción</span>
+            </div>
+          </div>
+        
+          <div role="listitem" class="lift" style="flex: 0 0 280px; aspect-ratio: 2 / 3; border: 1px solid rgba(242,242,240,0.16); background: #131313; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; box-sizing: border-box; position: relative; overflow: hidden">
+            <div aria-hidden="true" class="hatch-soft" style="position: absolute; inset: 0; opacity: 1"></div>
+            <span style="position: relative; font-weight: 900; font-size: 64px; line-height: 0.9; color: #4A4A47">04</span>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-weight: 800; font-size: 22px; text-transform: uppercase">[VOLCÁN]</span>
+              <span style="font-weight: 600; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #BDBDB9">En producción</span>
+            </div>
+          </div>
+        
+          <div role="listitem" class="lift" style="flex: 0 0 280px; aspect-ratio: 2 / 3; border: 1px solid rgba(242,242,240,0.16); background: #131313; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; box-sizing: border-box; position: relative; overflow: hidden">
+            <div aria-hidden="true" class="hatch-soft" style="position: absolute; inset: 0; opacity: 1"></div>
+            <span style="position: relative; font-weight: 900; font-size: 64px; line-height: 0.9; color: #4A4A47">05</span>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-weight: 800; font-size: 22px; text-transform: uppercase">[VOLCÁN]</span>
+              <span style="font-weight: 600; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #BDBDB9">En producción</span>
+            </div>
+          </div>
+        
+          <div role="listitem" class="lift" style="flex: 0 0 280px; aspect-ratio: 2 / 3; border: 1px solid rgba(242,242,240,0.16); background: #131313; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; box-sizing: border-box; position: relative; overflow: hidden">
+            <div aria-hidden="true" class="hatch-soft" style="position: absolute; inset: 0; opacity: 1"></div>
+            <span style="position: relative; font-weight: 900; font-size: 64px; line-height: 0.9; color: #4A4A47">06</span>
+            <div style="position: relative; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-weight: 800; font-size: 22px; text-transform: uppercase">[VOLCÁN]</span>
+              <span style="font-weight: 600; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #BDBDB9">En producción</span>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="ruta" style="padding: 100px 0; background: #101010; border-top: 1px solid rgba(242,242,240,0.1); border-bottom: 1px solid rgba(242,242,240,0.1)">
+    <div style="max-width: 1240px; width: 88%; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
+      <div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 20px">
+        <span class="label"><span aria-hidden="true" class="hatch" style="width: 44px; height: 14px"></span>La ruta · Norte a sur</span>
+        <h2 class="reveal" style="margin: 0; font-weight: 900; font-size: clamp(36px, 4.6vw, 64px); line-height: 0.98; text-transform: uppercase">21 subidos.<br><span style="color: #6E6E6A">79 por delante.</span></h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A3A3A0">De Antofagasta a Magallanes, cumbre por cumbre.</p>
+        <div role="img" aria-label="21 de 100 volcanes registrados" style="height: 14px; border: 1px solid rgba(242,242,240,0.3); position: relative">
+          <div class="hatch" style="position: absolute; inset: 0; width: 21%; background-color: #35612A"></div>
+        </div>
+        <span style="font-size: 13px; color: #A3A3A0">[LISTA DE EJEMPLO: REEMPLAZAR POR LOS VOLCANES REALMENTE SUBIDOS, CON ALTURA]</span>
+      </div>
+      <div style="flex: 999 1 560px; min-width: 0; position: relative; padding-left: 36px">
+        <div aria-hidden="true" style="position: absolute; left: 7px; top: 0; bottom: 0; width: 2px; background: rgba(242,242,240,0.14)"></div>
+        <div aria-hidden="true" class="routeline" style="position: absolute; left: 7px; top: 0; bottom: 0; width: 2px; background: #8CC56F"></div>
+        <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.22em; color: #6E6E6A; padding-bottom: 20px">NORTE · ANTOFAGASTA</div>
+        
+          <div class="reveal" style="position: relative; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding: 22px 0; border-top: 1px solid rgba(242,242,240,0.12)">
+            <svg width="18" height="15" viewBox="0 0 28 22" aria-hidden="true" style="position: absolute; left: -37px; top: 30px"><path d="M14 1 L27 21 L1 21 Z" fill="#8CC56F" stroke="#101010" stroke-width="3"></path></svg>
+            <span style="font-weight: 900; font-size: clamp(28px, 3.6vw, 48px); line-height: 1; text-transform: uppercase">Lonquimay</span>
+            <span style="font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A3A3A0">Araucanía</span>
+          </div>
+        
+          <div class="reveal" style="position: relative; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding: 22px 0; border-top: 1px solid rgba(242,242,240,0.12)">
+            <svg width="18" height="15" viewBox="0 0 28 22" aria-hidden="true" style="position: absolute; left: -37px; top: 30px"><path d="M14 1 L27 21 L1 21 Z" fill="#8CC56F" stroke="#101010" stroke-width="3"></path></svg>
+            <span style="font-weight: 900; font-size: clamp(28px, 3.6vw, 48px); line-height: 1; text-transform: uppercase">Llaima</span>
+            <span style="font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A3A3A0">Araucanía</span>
+          </div>
+        
+          <div class="reveal" style="position: relative; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding: 22px 0; border-top: 1px solid rgba(242,242,240,0.12)">
+            <svg width="18" height="15" viewBox="0 0 28 22" aria-hidden="true" style="position: absolute; left: -37px; top: 30px"><path d="M14 1 L27 21 L1 21 Z" fill="#8CC56F" stroke="#101010" stroke-width="3"></path></svg>
+            <span style="font-weight: 900; font-size: clamp(28px, 3.6vw, 48px); line-height: 1; text-transform: uppercase">Casablanca</span>
+            <span style="font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A3A3A0">Los Lagos</span>
+          </div>
+        
+          <div class="reveal" style="position: relative; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding: 22px 0; border-top: 1px solid rgba(242,242,240,0.12)">
+            <svg width="18" height="15" viewBox="0 0 28 22" aria-hidden="true" style="position: absolute; left: -37px; top: 30px"><path d="M14 1 L27 21 L1 21 Z" fill="#8CC56F" stroke="#101010" stroke-width="3"></path></svg>
+            <span style="font-weight: 900; font-size: clamp(28px, 3.6vw, 48px); line-height: 1; text-transform: uppercase">Sarnoso</span>
+            <span style="font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A3A3A0">Los Lagos · Cuenca del Rupanco</span>
+          </div>
+        
+          <div class="reveal" style="position: relative; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding: 22px 0; border-top: 1px solid rgba(242,242,240,0.12)">
+            <svg width="18" height="15" viewBox="0 0 28 22" aria-hidden="true" style="position: absolute; left: -37px; top: 30px"><path d="M14 1 L27 21 L1 21 Z" fill="#8CC56F" stroke="#101010" stroke-width="3"></path></svg>
+            <span style="font-weight: 900; font-size: clamp(28px, 3.6vw, 48px); line-height: 1; text-transform: uppercase">Calbuco</span>
+            <span style="font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A3A3A0">Los Lagos</span>
+          </div>
+        
+          <div class="reveal" style="position: relative; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding: 22px 0; border-top: 1px solid rgba(242,242,240,0.12)">
+            <svg width="18" height="15" viewBox="0 0 28 22" aria-hidden="true" style="position: absolute; left: -37px; top: 30px"><path d="M14 1 L27 21 L1 21 Z" fill="#8CC56F" stroke="#101010" stroke-width="3"></path></svg>
+            <span style="font-weight: 900; font-size: clamp(28px, 3.6vw, 48px); line-height: 1; text-transform: uppercase">Hornopirén</span>
+            <span style="font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A3A3A0">Los Lagos</span>
+          </div>
+        
+        <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.22em; color: #6E6E6A; padding-top: 20px; border-top: 1px solid rgba(242,242,240,0.12)">SUR · MAGALLANES</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cordada" style="padding: 100px 0">
+    <div style="max-width: 1240px; width: 88%; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <span class="label"><span aria-hidden="true" class="hatch" style="width: 44px; height: 14px"></span>Equipo</span>
+        <h2 class="reveal" style="margin: 0; font-weight: 900; font-size: clamp(36px, 4.6vw, 64px); line-height: 0.98; text-transform: uppercase">La cordada.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 12px">
+          <div class="hatch-soft" style="aspect-ratio: 4 / 5; background-color: #151515; display: flex; align-items: flex-end; padding: 16px; font-size: 12px; font-weight: 600; color: #A3A3A0">[FOTO EN TERRENO]</div>
+          <h3 style="margin: 0; font-weight: 800; font-size: 22px; text-transform: uppercase">Nicolás Espinosa</h3>
+          <p style="margin: 0; font-size: 15px; color: #A3A3A0">Montañista. Lidera ascensos y expediciones.</p>
+        </div>
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 12px">
+          <div class="hatch-soft" style="aspect-ratio: 4 / 5; background-color: #151515; display: flex; align-items: flex-end; padding: 16px; font-size: 12px; font-weight: 600; color: #A3A3A0">[FOTO EN TERRENO]</div>
+          <h3 style="margin: 0; font-weight: 800; font-size: 22px; text-transform: uppercase">Nicolás Mancilla</h3>
+          <p style="margin: 0; font-size: 15px; color: #A3A3A0">Dirección audiovisual. Cámara, dron y montaje.</p>
+        </div>
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 12px">
+          <div class="hatch-soft" style="aspect-ratio: 4 / 5; background-color: #151515; display: flex; align-items: flex-end; padding: 16px; font-size: 12px; font-weight: 600; color: #A3A3A0">[FOTO EN TERRENO]</div>
+          <h3 style="margin: 0; font-weight: 800; font-size: 22px; text-transform: uppercase">Raimundo Aguirre</h3>
+          <p style="margin: 0; font-size: 15px; color: #A3A3A0">Director y productor ejecutivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sumate" style="padding: 100px 0 120px; border-top: 1px solid rgba(242,242,240,0.1)">
+    <div style="max-width: 1240px; width: 88%; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <span class="label"><span aria-hidden="true" class="hatch" style="width: 44px; height: 14px"></span>Súmate</span>
+        <h2 class="reveal" style="margin: 0; max-width: 960px; font-weight: 900; font-size: clamp(36px, 5vw, 72px); line-height: 0.98; text-transform: uppercase">Cada cumbre necesita <span style="color: #8CC56F">una cordada.</span></h2>
+      </div>
+
+      <div class="reveal" style="background: #F2F2F0; color: #0B0B0B; padding: 44px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between">
+        <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #3A3A38">Para marcas</span>
+          <h3 style="margin: 0; font-weight: 900; font-size: clamp(30px, 3.6vw, 48px); line-height: 1; text-transform: uppercase">Auspicia una cumbre</h3>
+          <p style="margin: 0; max-width: 520px; font-size: 17px; line-height: 1.55; color: #2A2A28">Tu marca en un volcán: capítulo, cápsulas, registros semanales y una comunidad que vive la montaña. Te enviamos el media kit y coordinamos una reunión.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase">
+          <a href="mailto:100volcanes@gmail.com?subject=Media%20kit%20100%20Volcanes" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; background: #0B0B0B; color: #F2F2F0; text-decoration: none">Pedir media kit</a>
+          <a href="mailto:100volcanes@gmail.com?subject=Reuni%C3%B3n%20auspicio%20100%20Volcanes" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border: 1.5px solid #0B0B0B; color: #0B0B0B; text-decoration: none">Agendar reunión</a>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+        <div class="lift reveal" style="background: #151515; border: 1px solid rgba(242,242,240,0.12); padding: 32px; display: flex; flex-direction: column; gap: 14px">
+          <span class="label">Para la comunidad</span>
+          <h3 style="margin: 0; font-weight: 900; font-size: 30px; text-transform: uppercase">Únete a la cordada</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A3A3A0">Aporte mensual para mantener la serie libre y gratuita. Acceso anticipado y tu nombre en los créditos.</p>
+          <span style="font-weight: 900; font-size: 28px; color: #8CC56F">[PRECIO]/mes</span>
+          <a href="mailto:100volcanes@gmail.com?subject=Quiero%20aportar%20a%20100%20Volcanes" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; min-height: 54px; border: 1.5px solid #F2F2F0; text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase">Quiero aportar</a>
+        </div>
+        <div class="lift reveal" style="background: #151515; border: 1px solid rgba(242,242,240,0.12); padding: 32px; display: flex; flex-direction: column; gap: 14px">
+          <span class="label">Para aventureros</span>
+          <h3 style="margin: 0; font-weight: 900; font-size: 30px; text-transform: uppercase">Sube con nosotros</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A3A3A0">Expediciones guiadas a volcanes de la ruta, en grupos pequeños y con cupos por temporada.</p>
+          <a href="mailto:100volcanes@gmail.com?subject=Lista%20de%20espera%20expediciones" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; min-height: 54px; border: 1.5px solid #F2F2F0; text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase">Entrar a la lista de espera</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 72px 0 48px; border-top: 1px solid rgba(242,242,240,0.12)">
+    <div style="max-width: 1240px; width: 88%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+      <img src="img/logo-100volcanes.png" alt="100 Volcanes" style="height: 110px; width: auto">
+      <span class="label" style="justify-content: center">¡Si te interesa nuestro proyecto, conversemos!</span>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; font-size: 15px; font-weight: 600">
+        <a href="tel:+56991287580" style="text-decoration: none; padding: 12px 0">+56 9 9128 7580</a>
+        <a href="mailto:100volcanes@gmail.com" style="text-decoration: none; padding: 12px 0">100volcanes@gmail.com</a>
+        <a href="https://www.instagram.com/100_volcanes" style="text-decoration: none; padding: 12px 0">Instagram</a>
+        <a href="https://www.youtube.com/@100volcanes9" style="text-decoration: none; padding: 12px 0">YouTube</a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){
+  var el=document.getElementById('count'); if(!el) return;
+  var to=parseInt(el.getAttribute('data-to'),10)||0;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=to;return;}
+  var start=null,delay=3000,dur=1800;
+  function step(ts){ if(start===null) start=ts; var t=Math.min(1,Math.max(0,(ts-start-delay)/dur));
+    el.textContent=Math.round(to*(1-Math.pow(1-t,3))); if(t<1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+})();
+</script>
+</body>
+</html>
