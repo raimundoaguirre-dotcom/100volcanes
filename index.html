@@ -391,8 +391,8 @@ html{scroll-behavior:auto}
   v.src=small?'video/hero-antiparras-movil.mp4':'video/hero-antiparras-1080.mp4';
   v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>v.duration-1.2)show();});
   v.addEventListener('ended',function(){show();});
-  v.addEventListener('error',show);
-  var p=v.play();if(p&&p.catch)p.catch(function(){show();});
+  v.addEventListener('error',function(){v.style.display='none';show();});
+  var p=v.play();if(p&&p.catch)p.catch(function(){v.style.display='none';show();});
   setTimeout(show,9000);
   addEventListener('scroll',function(){if(scrollY>40)show();},{passive:true});
 })();
