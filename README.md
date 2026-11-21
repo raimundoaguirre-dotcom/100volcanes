@@ -14,4 +14,4 @@ Sitio estático de 100 Volcanes. Sin build: `index.html` + `img/`.
 - Fotos del equipo.
 - Precio del aporte mensual y link de pago (hoy abre un correo).
 - Link directo al piloto (hoy apunta al canal de YouTube).
-- Video de dron para el hero (opcional).
+- Hero: efecto antiparras (WebGL) sobre img/hero-antiparras.jpg. Ideal: reemplazar por un clip o foto real con viento blanco.
